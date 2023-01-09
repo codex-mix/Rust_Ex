@@ -3,10 +3,10 @@ use std::cmp::Ord;
 use std::io;
 fn main() {
     //랜덤 으로 1~100 사이의 숫자를 생성한다
-    let num = rand::thread_rng().gen_range(1..=100);
+    let num:u8 = rand::thread_rng().gen_range(1..=100);
 
     //3번의 기회안에 맞추기 카운트
-    let mut count = 1;
+    let mut count:u8 = 1;
 
     //숫자를 맞출때까지 반복실행한다.
     loop {
@@ -17,7 +17,7 @@ fn main() {
         println!("==================================");
         
         //입력받을 변수 선언
-        let mut guess = String::new();
+        let mut guess:string = String::new();
 
         // 입력 받음
         io::stdin()
@@ -25,7 +25,7 @@ fn main() {
             .expect("Failed to read line");
 
         //입력 받은 문자를 숫자로 변환    
-        let guess: u32 = guess.trim().parse().expect("숫자가 아닙니다");
+        let guess: u8 = guess.trim().parse().expect("숫자가 아닙니다");
 
         println!("==================================");
 
