@@ -24,8 +24,15 @@ fn main() {
             .read_line(&mut guess)
             .expect("Failed to read line");
 
-        //입력 받은 문자를 숫자로 변환    
-        let guess: u8 = guess.trim().parse().expect("숫자가 아닙니다");
+        //입력 받은 문자를 숫자로 변환   
+        let guess: u8 = match guess.trim().parse()
+        {
+            //숫자가 아니면 다시 입력받기    
+            Ok(num) => num,
+            Err(_) => continue,
+            
+        };
+        
         
 
         println!("==================================");
