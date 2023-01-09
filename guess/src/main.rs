@@ -31,9 +31,9 @@ fn main() {
 
         // 조건 판단
         match guess.cmp(&num) {
-            std::cmp::Ordering::Less => println!("좀더 높은 숫자 입니다."),
-            std::cmp::Ordering::Greater => println!("좀더 낮은 수자 입니다."),
-            std::cmp::Ordering::Equal => println!("정답니다.!!"),
+            std::cmp::Ordering::Less => println!("좀더 높은 숫자 입니다."),    //입력한숫자가 작을때
+            std::cmp::Ordering::Greater => println!("좀더 낮은 숫자 입니다."), //입력한숫자가 높을때
+            std::cmp::Ordering::Equal => println!("정답니다.!!"),              //입력한 숫자와 컴퓨터가 생각한 숫자가 같을때
         }
         println!("==================================");
         println!("▶▶▶  기회는 3번 = {}째 도전!", count + 123);
